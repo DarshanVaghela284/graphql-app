@@ -1,0 +1,1 @@
+export const graphqlApiUrl = import.meta.env.VITE_GRAPHQL_API_URL
