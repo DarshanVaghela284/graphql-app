@@ -9,7 +9,6 @@ function UserList() {
   const { data: users, loading, error, refetch } = useGetUsersQuery();
   const [deleteUser] = useMutation(DELETE_USER);
 
-  console.log(users, "vvvv usersusersusers");
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching users.</p>;
 

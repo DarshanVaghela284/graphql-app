@@ -64,7 +64,6 @@ const resolvers = {
         email,
         isActive,
       };
-      console.log(newUser);
       users.push(newUser);
     },
   },

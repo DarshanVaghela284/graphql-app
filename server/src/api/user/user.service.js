@@ -5,7 +5,6 @@ import { checkUserWithMobile } from "./user.dao.js";
 export async function loginUser({ mobile, password }) {
   const user = await checkUserWithMobile({ mobile });
 
-  console.log(user);
   if (!user) {
     return Format.notFound(null, "User not registered with this mobile!");
   }

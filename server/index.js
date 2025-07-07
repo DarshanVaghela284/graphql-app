@@ -13,18 +13,6 @@ const port = 8080;
 
 app.use(cors());
 
-function authenticate(req) {
-  console.log(req);
-  // Implement your authentication logic here
-  // For example, check for a token in headers or cookies
-  // const token = req.headers.authorization || req.cookies.token;
-  // if (!token) {
-  //   throw new Error("Authentication required");
-  // }
-  // Validate the token and set user context if needed
-  // Example: req.user = validateToken(token);
-}
-
 const server = new ApolloServer({
   typeDefs,
   resolvers,

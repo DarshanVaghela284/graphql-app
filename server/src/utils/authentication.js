@@ -16,8 +16,8 @@ export const verifyToken = (token) => {
 
 export function requireAuth(resolver) {
   return async (parent, args, context, info) => {
-    if (context.code !== 200) {
-      throw new Error("Unauthorized access");
+    if (context.code === 401) {
+      throw new Error("Unauthorized");
     }
     return resolver(parent, args, context, info);
   };
